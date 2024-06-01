@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Physical Therapy Clinic</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Add Montserrat font from Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+</head>
+<body>
+    <style>
+        body{
+            background-image: url(h10.jpeg);
+            background-size: cover;
+        }
+    </style>
+    <style>
+    body {
+        background-image: url(h10.jpg);
+        background-size: cover;
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: #8a7095;
+        color: #4b1052;
+        padding: 20px;
+        text-align: center;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+
+    nav ul li a {
+        color: #0e5242;
+        text-decoration: none;
+        font-weight: bolder;
+    }
+
+    main {
+        padding: 20px;
+        text-align: center;
+    }
+
+    #contact {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    h2 {
+        color: #6a2869;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
+    footer {
+        background-color: #554282;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    /* Form styles */
+    form {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    label {
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    button[type="submit"] {
+        margin-top: 10px;
+        padding: 8px 20px;
+        background-color: #1a2735;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #590619;
+    }
+
+    #form-message {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #dff0d8;
+        border: 1px solid #c3e6cb;
+        color: #155724;
+        border-radius: 5px;
+        display: none;
+    }
+
+    /* Scroll to success message */
+    #form-message.show {
+        display: block;
+        animation: slide-up 0.5s ease;
+    }
+    input[type="tel"] {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    @keyframes slide-up {
+        0% {
+            transform: translateY(50px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+</style>
+    <header>
+        <h1>Physical Therapy Clinic</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="team.html">Our Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="detail.html">Details</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contact">
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" pattern="[A-Za-z ]+" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone"placeholder="Enter your phone number" pattern="[0-7]{4}-[9-1]{6}-[8-2]{3}" required>
+            
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter email account" pattern="{A-Za-z}+" required>
+            
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Type your concern here" pattern="your appointment letter with your concern"required></textarea>
+            
+                <button type="submit">Submit</button>
+            </form>
+            
+            <div id="form-message"></div>
+            <h2>Contact Us</h2>
+            <p>Feel free to reach out to us:</p>
+            <ul>
+                <li>Email: infosamiafatima122004@gmail.com</li>
+                <li>Phone: 123-456-876</li>
+                <li>Address: MEDCARE HOSPITAL L.L.C, OPP. SAFA PARK GATE NO: 1, JUMEIRAH, DUBAI</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Physical Therapy Clinic</p>
+    </footer>
+    <script>
+        const contactForm = document.getElementById('contact-form');
+        const formMessage = document.getElementById('form-message');
+
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission behavior
+
+            // Get form data
+            const formData = new FormData(contactForm);
+
+            // Simulate form submission (you would handle this on the server side)
+            // For demonstration purposes, just display a success message
+            formMessage.textContent = 'Your message has been successfully submitted THANKYEWW!';
+            formMessage.style.color = 'red';
+
+            // Reset the form after submission
+            contactForm.reset();
+
+            // Scroll to the success message
+            formMessage.classList.add('show');
+            setTimeout(() => {
+                formMessage.classList.remove('show');
+            }, 3000); // Hide message after 3 seconds
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - Physical Therapy Clinic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+        body {
+            background-image: url(images.jpeg);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+    
+        header {
+            background-color: #8b1460;
+            color: #afdfe2;
+            padding: 20px;
+            text-align: center;
+        }
+    
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+    
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+    
+        nav ul li a {
+            color: #0c4f79;
+            text-decoration: none;
+        }
+    
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+    
+        #team {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+    
+        h2 {
+            color: #194248;
+        }
+    
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+    
+        li {
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+        }
+    
+        li:hover {
+            background-color: #e0e0e0;
+        }
+    
+        footer {
+            background-color: #6c2f2f;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <style>
+        body{
+            background-image: url(images.jpeg);
+        }
+    </style>
+    <header>
+        <h1>Physical Therapy Clinic</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="team.html">Our Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="detail.html">Details</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="team">
+            <h2>Our Team</h2>
+            <p>Meet our dedicated team of professionals:</p>
+            <ul>
+                <li>John Doe - Physical Therapist</li>
+                <li>Jane Smith - Occupational Therapist</li>
+                <li>Mike Johnson - Sports Rehabilitation Specialist</li>
+                <li>Sarah Lee - Pain Management Specialist</li>
+            </ul>
+            <!-- Video -->
+            <video controls autoplay loop>
+                <source src="med.mp4" type="video/mp4">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Physical Therapy Clinic</p>
+    </footer>
+    <script>
+        const teamMembers = {
+            "john-doe": "John Doe is a licensed physical therapist with over 10 years of experience in orthopedic and sports rehabilitation.",
+            "jane-smith": "Jane Smith specializes in occupational therapy for children and adults with developmental disabilities. She is passionate about helping her patients achieve independence in their daily lives.",
+            "mike-johnson": "Mike Johnson is a certified sports rehabilitation specialist who has worked with professional athletes and weekend warriors alike. He utilizes evidence-based techniques to help his patients return to their pre-injury level of performance.",
+            "sarah-lee": "Sarah Lee is a board-certified pain management specialist with expertise in treating chronic pain conditions. She takes a multidisciplinary approach to pain management, incorporating medication, physical therapy, and interventional procedures."
+        };
+
+        const additionalInfoDiv = document.getElementById('additional-info');
+
+        // Add click event listeners to each team member
+        const teamMemberItems = document.querySelectorAll('#team li');
+        teamMemberItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const memberId = item.id;
+                const memberInfo = teamMembers[memberId];
+
+                // Clear previous additional information
+                additionalInfoDiv.innerHTML = '';
+
+                // Create a paragraph element with member information
+                const memberInfoParagraph = document.createElement('p');
+                memberInfoParagraph.textContent = memberInfo;
+
+                // Append the paragraph element to the additional info div
+                additionalInfoDiv.appendChild(memberInfoParagraph);
+            });
+        });
+    </script>
+</body>
+</html>

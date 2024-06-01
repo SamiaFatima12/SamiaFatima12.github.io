@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physical Medical Centre</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* add your enchanced CSS here */
+        /* Header styling */
+        header{
+            background: linear-gradient(135deg,#59C3C3,#F6B352);
+            color: #327586;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0,0.1);
+
+        }
+        /*navigation menu styling*/
+        nav ul li a{
+            color: #333;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover{
+            color: #F6B352;
+        }
+
+        /*Main Section styling*/
+        main{
+             padding: 20px;
+             background-color: #fff;
+             border-radius: 10px;
+             box-shadow: 0 2px 5px rgba(0, 0, 0,0.1);
+             background-image: url(h6.jpeg);
+             
+        }
+        /* footer atyling*/
+        body{
+            background-color:#3e013931;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        /*additonal styles*/
+        body{
+            background-color: #1b8b7e;
+            font-family: Arial,sans-serif;
+        }
+        #clinic details{
+            padding: 20px;
+            background-color: #1f5782;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0,0.1);
+        }
+
+        #clinic-details p{
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        #clinic-details ul{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        #clinic-details li{
+            margin-bottom: 10px;
+            color: #327586;
+        }
+        #clinic-details h2 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="title">Physical Therapy Clinic</h1>
+        <button onclick="toggleMenu()"></button>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="team.html">Our Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="detail.html">Details</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="clinic-details">
+            <h2>Our Clinic</h2>
+            <p>Here are some details about our physical therapy clinic</p>
+            <ul>
+                <li>Our Physical Therapy Clinic is a beacon of hope for those seeking to regain 
+                    mobility, strength, and vitality. Nestled in the heart of the community, our clinic 
+                    stands as a pillar of support for individuals striving to overcome physical challenges.
+                     With a dedicated team of experienced therapists and state-of-the-art facilities, 
+                     we offer personalized care tailored to each patient's unique needs.
+                      Whether recovering from injury, managing chronic conditions, 
+                      or pursuing peak athletic performance, our clinic provides a compassionate and 
+                      empowering environment for healing and growth. 
+                      We believe in a holistic approach to wellness, addressing not only the physical 
+                      but also the emotional and psychological aspects of rehabilitation. 
+                      At our clinic, every step is a journey towards renewed health and well-being, 
+                      guided by expert hands and compassionate hearts.</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Physcial Therapy Centre</p>
+    </footer>
+    <script>
+        //javascript for toogling mobile navigation menu 
+        function tooglemenu(){
+            var nav=document.querySelectorAll('nav ul li a').foreach(anchor=> {
+                anchor.addeventlistener('click',function(e){
+                    e.preventdefault();
+                    document.querySelector(this.getAttribute('href')).scrollintoview({
+                        behaviour:'smooth'
+                    });
+                });
+            });
+        }
+    </script>
+</body>
+</html>

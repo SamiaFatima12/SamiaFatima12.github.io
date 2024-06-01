@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Physical Therapy Clinic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+body {
+    background-color: #029191; /* Light gray background */
+    font-family: 'Roboto', sans-serif; /* Google Font for typography */
+    background-image: url(h9.jpg);
+}
+
+header {
+    background-color: #09233e; /* Blue header background */
+    color: #fff; /* White text color */
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #008040;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+#services {
+    background-color: #3a8e6a; /* White background for services section */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+}
+
+h2 {
+    color: #43083b; /* Blue heading color */
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+li:hover {
+    background-color: #f0f0f0; /* Light gray background on hover */
+}
+
+#service-details {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f0f0f0; /* Light gray background for service details */
+    border-radius: 10px; /* Rounded corners */
+}
+
+footer {
+    background-color: #1a644c; /* Blue footer background */
+    color: #fff; /* White text color */
+    padding: 10px;
+    text-align: center;
+}
+</style>
+
+<body>
+    <header>
+        <h1>Physical Therapy Clinic</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="team.html">Our Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="detail.html">Details</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="services">
+            <h2>Our Services</h2>
+            <p>Here are some of the services we offer:</p>
+            <ul>
+                <li id="physical-therapy">Physical Therapy</li>
+                <li id="occupational-therapy">Occupational Therapy</li>
+                <li id="sports-rehab">Sports Rehabilitation</li>
+                <li id="post-surgery">Post-Surgery Recovery</li>
+                <li id="pain-management">Pain Management</li>
+            </ul>
+            <!-- Service Details -->
+            <div id="service-details"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Physical Therapy Clinic</p>
+    </footer>
+
+    <script>
+        // Service details
+        const serviceDetails = {
+            "physical-therapy": "Our physical therapy service aims to improve mobility, restore function, and relieve pain using various techniques such as exercise, manual therapy, and modalities.",
+            "occupational-therapy": "Occupational therapy helps individuals regain independence in daily activities through rehabilitation, adaptive techniques, and assistive devices.",
+            "sports-rehab": "Sports rehabilitation focuses on the treatment and prevention of sports-related injuries, helping athletes return to their pre-injury level of performance.",
+            "post-surgery": "Our post-surgery recovery program includes personalized rehabilitation plans to facilitate healing and optimize recovery after surgical procedures.",
+            "pain-management": "Pain management services aim to alleviate pain through a multidisciplinary approach, including medication, physical therapy, and psychological interventions."
+        };
+
+        // Add click event listeners to each service item
+        const serviceItems = document.querySelectorAll('#services li');
+        serviceItems.forEach(item => {
+            item.addEventListener('click', () => {
+                // Remove the 'selected-service' class from all service items
+                serviceItems.forEach(item => {
+                    item.classList.remove('selected-service');
+                });
+
+                // Add 'selected-service' class to the clicked service item
+                item.classList.add('selected-service');
+
+                const serviceId = item.id;
+                const serviceDetail = serviceDetails[serviceId];
+                const serviceDetailsDiv = document.getElementById('service-details');
+
+                // Clear previously displayed service details
+                serviceDetailsDiv.innerHTML = '';
+
+                // Create a paragraph element with service details
+                const serviceDetailParagraph = document.createElement('p');
+                serviceDetailParagraph.textContent = serviceDetail;
+
+                // Append the paragraph element to the service details div
+                serviceDetailsDiv.appendChild(serviceDetailParagraph);
+
+                // Smooth scroll to the service details section
+                serviceDetailsDiv.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>

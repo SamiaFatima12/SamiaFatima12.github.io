@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional styles can be added here */
+        /* Give some breathing space */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0f6156;
+            background-image: url(h7.jpg);
+        }
+
+        /* Improve header design */
+        header {
+            background-color: #820a68;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        .menu li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .menu li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu li a:hover {
+            background-color: #095459;
+        }
+
+        /* Improve blog post design */
+        .blog-post {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .blog-post:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-post h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .blog-post p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .blog-post a {
+            color: #507076;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .blog-post a:hover {
+            color: #0056b3;
+        }
+        
+        
+        /* Footer styling */
+        footer {
+            background-color: #a4649d;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Physical Therapy Clinic</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="detail.html">Detail</a></li>
+            </ul>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="blog-post">
+            <img src="h1.jpeg" alt="Healthy Living Image">
+            <img src="h2.jpeg"alt="healthy living image">
+            <h2>Top 5 Tips for Healthy Living</h2>
+            <p>Published on: May 11, 2024</p>
+            <ul>
+                <li>Eat Healthy</li>
+                <li>Exercise daily</li>
+                <li>Keep yourself near nature</li>
+                <li>Sleep properly</li>
+                <li>Avoid negative thoughts</li>
+            </ul>
+            <a href="#">Read more</a>
+        </section>
+
+        <section class="blog-post">
+            <img src="h3.jpeg" alt="Treatment">
+           <img src="h4.jpeg" alt="Treatment">
+            <h2>New Breakthrough in Cancer Treatment</h2>
+            <p>Published on: May 10, 2022</p>
+            <p>CAR-T-cell therapy, a treatment that makes immune cells hunt down and kill cancer cells, was declared a success for leukemia patients in 2022. Known as CAR-T-cell therapy, it involves removing and genetically altering immune cells, called T cells, from cancer patients...</p>
+            <a href="#">Read more</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Medical Center. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.querySelector('.menu');
+            var menuIcon = document.querySelector('.menu-icon');
+            menu.classList.toggle('active');
+            menuIcon.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
